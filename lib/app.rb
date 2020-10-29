@@ -4,6 +4,7 @@ require './lib/birthday'
 class MyApp < Sinatra::Base
   enable :sessions
   set :session_secret, "here be dragons"
+  set :public_folder, 'public'
 
   get '/' do
     erb :index
@@ -14,16 +15,13 @@ class MyApp < Sinatra::Base
     $name = params['name']
     $day = params['day']
     $month = params['month']
-    p $name
-    p $day
-    p $month
     redirect to('/result')
   end
 
   get '/result' do
-    p $name
-    p $day
-    p $month
+    @name = $name
+    @days_to_go = Birthday.new($day, $month).calculate
+    erb :result
   end
   # start the server if ruby file executed directly
   run! if app_file == $0

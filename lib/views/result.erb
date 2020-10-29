@@ -1,0 +1,14 @@
+<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+<% if @days_to_go == 0 %>
+  <body>
+    <div id = "allcontent">
+      <h1> Happy Birthday, <%=@name%>! </h1>
+    </div>
+  </body>
+<%else%>
+  <body>
+    <div id = "allcontent">
+      <h1> <%= @name %>, it is <%= @days_to_go %> days until your birthday! </h1>
+    </div>
+  </body>
+<%end%>

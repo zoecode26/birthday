@@ -1,0 +1,27 @@
+body{
+  color: #02075d;
+  background-color: #afeeee;
+  font-family: arial;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+
+input, select{
+  font-size: 1em;
+}
+
+div {
+  margin-bottom: 2vh;
+}
+
+#allcontent {
+  margin: 0;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 3vw;
+  border: 3px double #02075d;
+}
